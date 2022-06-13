@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroupItem, CustomInput, Button} from 'reactstrap';
+import { ListGroupItem, Input, Button} from 'reactstrap';
 import PropTypes from 'prop-types'
 
 // List Item Component
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const ListItem = ({ todo, toggleSelect, toggleComplete }) => {
     return (
         <ListGroupItem className='d-flex align-items-center'>
-            <CustomInput 
+            <Input 
                 type = 'checkbox'
                 id = {todo.id}
                 checked = {todo.isSelected}

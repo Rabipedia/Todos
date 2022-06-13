@@ -19,10 +19,10 @@ const ListView = ({ todos, toggleSelect, toggleComplete }) => {
     )
 }
 
-ListGroup.propTypes = {
+ListView.propTypes = {
     todos: PropTypes.object.isRequired,
     toggleSelect: PropTypes.func.isRequired,
     toggleComplete: PropTypes.func.isRequired
 }
 
-export default ListGroup;
+export default ListView;

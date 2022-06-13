@@ -1,18 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CustomInput, Button} from 'reactstrap';
+import PropTypes from 'prop-types'
+import { Input, Button } from 'reactstrap';
 
 
 
-const RowItem = ({ todo, togglSelect, toggleComplete }) => {
+const RowItem = ({ todo, toggleSelect, toggleComplete }) => {
     return (
         <tr>
             <td>
-                <CustomInput
+                <Input
                     type='checkbox'
                     id={todo.id}
                     checked={todo.isSelect}
-                    onChange={() => togglSelect(todo.id)}
+                    onChange={() => toggleSelect(todo.id)}
                 />
             </td>
             <td>
@@ -33,7 +33,7 @@ const RowItem = ({ todo, togglSelect, toggleComplete }) => {
 
 RowItem.propTypes = {
     todo: PropTypes.object.isRequired,
-    togglSelect: PropTypes.func.isRequired,
+    toggleSelect: PropTypes.func.isRequired,
     toggleComplete: PropTypes.func.isRequired
 };
 
