@@ -91,11 +91,24 @@ class Todos extends React.Component {
         })
      };
 
-     clearSelected = () => {};
+     clearSelected = () => {
+        const todos = this.state.todos.filter(todo => !todo.isSelect);
+        this.setState({todos})
+     };
 
-     clearCompleted = () => {};
+     clearCompleted = () => {
+        const todos = this.state.todos.filter(todo => !todo.isComplete);
+        this.setState({todos})
+     };
 
-     reset = () => {};
+     reset = () => {
+        this.setState({
+            filter: 'all',
+            searchTerm: '',
+            view: 'list',
+            isOpenTodoForm: false
+        })
+     };
 
      performFilter = todos => {
         const {filter} = this.state;
