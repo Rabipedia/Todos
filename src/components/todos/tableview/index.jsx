@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Table } from 'reactstrap';
 import RowItem from './tableitem';
 
-const TableView = ({ todos, toggleSelct, toggleComplete }) => {
+const TableView = ({ todos, toggleSelect, toggleComplete }) => {
     return (
         <Table>
             <thead>
@@ -17,8 +17,9 @@ const TableView = ({ todos, toggleSelct, toggleComplete }) => {
             <tbody>
                 {todos.map(todo => (
                 <RowItem
+                    key={todo.id}
                     todo={todo}
-                    toggleSelect={toggleSelct}
+                    toggleSelect={toggleSelect}
                     toggleComplete={toggleComplete}
                 />
                 ))}

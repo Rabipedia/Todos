@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {Input, Button} from 'reactstrap';
 
-const SearchPanel = ({ term, handleSearch, toggleForm}) => {
-    return (
+const SearchPanel = ({ term, handleSearch, toggleForm}) =>  (
         <div className="d-flex">
             <Input
                 placeholder="Enter Search Term"
@@ -13,8 +12,8 @@ const SearchPanel = ({ term, handleSearch, toggleForm}) => {
             />
             <Button color="success" onClick={toggleForm}>New</Button>
         </div>
-    )
-};
+);
+
 
 SearchPanel.propTypes = {
     term: PropTypes.string.isRequired,

@@ -9,6 +9,7 @@ const ListView = ({ todos, toggleSelect, toggleComplete }) => {
             {
                 todos.map(todo => (
                     <ListItem
+                        key={todo.id}
                         todo={todo}
                         toggleSelect={toggleSelect}
                         toggleComplete={toggleComplete}

@@ -40,8 +40,8 @@ class CreateTodoForm extends React.Component {
                     <Input
                         type='textarea'
                         placeholder='write some sort of description about your task'
-                        name='text'
-                        value={this.state.text}
+                        name='description'
+                        value={this.state.description}
                         onChange={this.handleChange}
                     />
                 </FormGroup>
@@ -49,7 +49,7 @@ class CreateTodoForm extends React.Component {
             </Form>
         )
     }
-}
+};
 
 CreateTodoForm.propTypes = {
     createTodo: PropTypes.func.isRequired
